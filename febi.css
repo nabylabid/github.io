@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    background: linear-gradient(45deg, #fcb045, #fd1d1d, #833ab4);
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.photos {
+    margin-top: 30px;
+}
+
+.photos h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #fbc2eb, #a6c1ee);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.photo-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photo-container {
+    width: 300px;
+    height: 225px; /* 4:3 aspect ratio */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-container:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 30px;
+    background: linear-gradient(45deg, #fcb045, #fd1d1d, #833ab4);
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('fireworks.png') repeat;
+    z-index: 1;
+    opacity: 0.7;
+    animation: fireworks-animation 5s infinite;
+}
+
+@keyframes fireworks-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: -1000px -1000px; }
+}
